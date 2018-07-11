@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Minimal|Login</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function setCenter()
+        {
+          var h1 = document.getElementById('main').clientHeight;
+          var h2= document.getElementById('ft').clientHeight;
+          var h =window.innerHeight;
+          var rem=(h-(h1+h2))/2;
+          var top= (30*rem)/100;
+          var bottom=(50*rem)/100;
+          document.getElementById('hed').style.cssText="padding-top:"+top+"px; padding-bottom:"+bottom+"px;";
+        }
+    </script>
+  </head>
+  <body onload="setCenter();">
+      <div id="main">
+          <div class="container" id="hed">
+                    <img id="logo1" src="images/palette.svg" alt="techfeed360"><span id="lheader">TechFeed 360</span>
+          </div>
+          <div class="container align-self-center" id="ct1">
+              <div class="row">
+                  <div class="col-sm-6">
+                      <div id="test">
+                          <span><img id="img2" src="images/settings.svg" alt="techfeed360"><br></span>
+                          <span id="itext">I love the beauty of simplicity. It's simply beautiful!</span>
+                      </div>
+                  </div>
+                    <div class="col-sm-1">
+                    </div>
+                  <div class="col-sm-5">
+                      <div id="lhead">
+                          Login to Web Client
+                      </div>
+                      <br>
+                      <form class="form-group" name="login">
+                          <label id="login1" >Username</label>
+                          <p><input class="form1" id="e1" type="text" name="email" onKeyup="checkform()"></p>
+                          <label id="login2">Password</label>
+                          <p><input class="form1" id="p1" type="password" name="pass" onKeyup="checkform()"></p>
+                          <br>
+                          <button id="lbtn" type="submit" class="btn btn-default" disabled="disabled">Login</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="container-fluid">
+            <div id="ft" class="row">
+                <span id="ftt">Copyright © <a href="http://www.techfeed360.com" target="_blank" class="text-dark"><strong>TechFeed 360</strong></a>. All rights reserved.<br></span>
+            </div>
+      </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script>
+        function checkform() //you can add your validation function here
+        {
+            var flag = false;
+            var a=document.forms["login"]["email"].value;
+            var b=document.forms["login"]["pass"].value;
+            if (!(a==null || a==""))
+            {
+              document.getElementById('e1').style.cssText="border-bottom: 1px solid #1A73E8;";
+            }
+            else {
+              document.getElementById('e1').style.cssText="border-bottom: 1px solid #ccc;";
+              flag = true;
+            }
+            if (!(b==null || b==""))
+            {
+              document.getElementById('p1').style.cssText="border-bottom: 1px solid #1A73E8;";
+            }
+            else {
+              document.getElementById('p1').style.cssText="border-bottom: 1px solid #ccc;";
+              flag = true;
+            }
+            if(!flag)
+            {
+              document.getElementById('lbtn').disabled =flag ;//if false button enabled
+              document.getElementById('lbtn').style.cssText="background-color: #1A73E8;color: white;font-weight: 400;";
+            }
+            else{
+              document.getElementById('lbtn').disabled =flag ;
+              document.getElementById('lbtn').style.cssText="background-color: white;color: inherit;font-weight: 300;";
+            }
+        }
+    </script>
+  </body>
+</html>
