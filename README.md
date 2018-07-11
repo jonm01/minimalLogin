@@ -11,7 +11,7 @@
 Demo:https://login.techfeed360.com
 
 
-The SVG Images(Icons) used in this template are used only for demo purpose. I don't own any right to those SVG graphics. Please change it to your company logo or anything of your choice.
+The SVG Images(Icons) used in this template are used only for demo purpose. I don't own any right to those SVG graphics.
 
 Credits:
 
